@@ -3,10 +3,18 @@ package it.polito.tdp.poweroutages.model;
 public class Nerc {
 	private int id;
 	private String value;
+	private boolean staDonando;
+	private Integer bonus;
+	/*private List<LocalDateTime> dateDonazioni;
+	private List<Nerc> nercDonazioni;*/
 
 	public Nerc(int id, String value) {
 		this.id = id;
 		this.value = value;
+		this.staDonando = false;
+		this.bonus = 0;
+		/*this.dateDonazioni = new ArrayList<>();
+		this.nercDonazioni = new ArrayList<>();*/
 	}
 
 	public int getId() {
@@ -53,4 +61,34 @@ public class Nerc {
 		builder.append(value);
 		return builder.toString();
 	}
+
+	public boolean staDonando() {
+		return staDonando;
+	}
+
+	public void setStaDonando(boolean staDonando) {
+		this.staDonando = staDonando;
+	}
+
+	public Integer getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(Integer bonus) {
+		this.bonus = bonus;
+	}
+	
+/*
+	public List<LocalDateTime> getDateDonazioni() {
+		return dateDonazioni;
+	}
+
+	public List<Nerc> getNercDonazioni() {
+		return nercDonazioni;
+	}
+	
+	public void addDonazione(LocalDateTime data, Nerc nerc) {
+		dateDonazioni.add(data);
+		nercDonazioni.add(nerc);
+	}*/
 }
